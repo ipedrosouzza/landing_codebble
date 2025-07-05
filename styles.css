@@ -476,6 +476,11 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 .step {
   text-align: center;

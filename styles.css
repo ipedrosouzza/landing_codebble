@@ -78,7 +78,7 @@ body {
   }
 }
 
-/* Header */
+/* Header - Versão Corrigida */
 .header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -86,26 +86,28 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 0; /* Remove padding extra */
 }
 
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 20px;
+  padding: 12px 20px; /* Reduzido de 1rem para 12px */
+  min-height: 60px; /* Altura fixa menor */
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px; /* Reduzido de 8px */
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px; /* Reduzido de 32px */
+  height: 28px;
   background: linear-gradient(45deg, #06b6d4, #8b5cf6);
-  border-radius: 8px;
+  border-radius: 6px; /* Reduzido de 8px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,32 +115,25 @@ body {
 
 .logo-icon i {
   color: white;
-  font-size: 18px;
+  font-size: 16px; /* Reduzido de 18px */
 }
 
 .logo-text {
-  font-size: 24px;
+  font-size: 20px; /* Reduzido de 24px */
   font-weight: bold;
   color: white;
 }
 
-.accent {
-  color: #06b6d4;
-}
-
 .nav {
   display: flex;
-  gap: 24px;
+  gap: 20px; /* Reduzido de 24px */
 }
 
 .nav a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: white;
+  font-size: 14px; /* Adicionado tamanho menor */
 }
 
 /* Buttons */
@@ -550,17 +545,40 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Responsive Design */
+/* Responsive Design - Versão Corrigida */
 @media (max-width: 768px) {
   .header .container {
-    flex-direction: column;
-    gap: 16px;
+    flex-direction: row; /* Mantém em linha no mobile */
+    padding: 8px 16px; /* Padding ainda menor */
+    min-height: 50px; /* Altura menor no mobile */
+    gap: 8px;
+  }
+
+  .logo {
+    gap: 4px;
+  }
+
+  .logo-icon {
+    width: 24px; /* Ainda menor no mobile */
+    height: 24px;
+  }
+
+  .logo-icon i {
+    font-size: 14px;
+  }
+
+  .logo-text {
+    font-size: 16px; /* Bem menor no mobile */
   }
 
   .nav {
-    order: 3;
-    width: 100%;
-    justify-content: center;
+    display: none; /* Esconde navegação no mobile */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Botão menor */
+    font-size: 12px;
+    border-radius: 6px;
   }
 
   .hero-buttons {
@@ -583,19 +601,142 @@ body {
   .steps-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Hero section mobile */
+  .hero {
+    padding: 40px 0; /* Reduzido de 80px */
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3.5rem); /* Menor no mobile */
+    margin-bottom: 16px; /* Reduzido */
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.4rem); /* Menor no mobile */
+    margin-bottom: 24px; /* Reduzido */
+  }
+
+  .badge {
+    font-size: 12px; /* Menor */
+    padding: 6px 12px; /* Menor */
+    margin-bottom: 16px; /* Reduzido */
+  }
+
+  /* Sections mobile */
+  .plans,
+  .benefits,
+  .bonus,
+  .how-to,
+  .cta {
+    padding: 40px 0; /* Reduzido de 80px */
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem); /* Menor no mobile */
+    margin-bottom: 12px; /* Reduzido */
+  }
+
+  .section-header {
+    margin-bottom: 32px; /* Reduzido de 64px */
+  }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 16px;
+    padding: 0 12px; /* Reduzido de 16px */
+  }
+
+  .header .container {
+    padding: 6px 12px; /* Ainda menor */
+    min-height: 45px;
+  }
+
+  .logo-text {
+    font-size: 14px; /* Muito pequeno para telas pequenas */
+  }
+
+  .logo-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-icon i {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 11px;
   }
 
   .plan-card {
-    padding: 24px 16px;
+    padding: 20px 12px; /* Reduzido */
   }
 
   .bonus-card {
-    padding: 32px 16px;
+    padding: 24px 12px; /* Reduzido */
+  }
+
+  /* WhatsApp button mobile */
+  .whatsapp-float {
+    width: 50px; /* Menor no mobile */
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float i {
+    font-size: 24px; /* Menor */
+  }
+}
+
+/* Menu hamburger para mobile (opcional) */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav.mobile-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    backdrop-filter: blur(20px);
+  }
+
+  .nav.mobile-open a {
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Ajustes específicos para iPhone */
+@media (max-width: 375px) {
+  .header .container {
+    padding: 4px 8px;
+    min-height: 40px;
+  }
+
+  .logo-text {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 4px 8px;
+    font-size: 10px;
   }
 }
 

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code.bble - Sites Profissionais por Assinatura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles-container">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Fale conosco!</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span class="logo-text">code<span class="accent">.bble</span></span>
+            </div>
+            <nav class="nav">
+                <a href="#planos">Planos</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <button class="btn btn-primary" onclick="openWhatsApp('Olá! Gostaria de começar agora com meu site profissional!')">
+                Começar Agora
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+  <div class="container">
+    <div class="badge floating-element" data-speed="2">🚀 Site Rápido</div>
+    <h1 class="hero-title">
+      <span class="text-reveal">Seu site profissional</span><br>
+      <span class="gradient-text text-reveal" style="animation-delay: 0.3s">por assinatura</span>
+    </h1>
+    <p class="hero-subtitle text-reveal" style="animation-delay: 0.6s">
+      Você foca no seu negócio, a gente cuida do seu site.
+    </p>
+    <div class="hero-buttons text-reveal" style="animation-delay: 0.9s">
+      <button class="btn btn-primary btn-lg btn-hover-effect" onclick="scrollToSection('planos')">
+        Ver Planos
+        <span class="btn-ripple"></span>
+      </button>
+      <button class="btn btn-outline btn-lg btn-hover-effect" onclick="scrollToSection('beneficios')">
+        Saiba Mais
+        <span class="btn-ripple"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+    <!-- Plans Section -->
+    <section id="planos" class="plans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Planos de Aluguel de Site</h2>
+                <p>💸 Pronto para Vender</p>
+            </div>
+            <div class="plans-grid">
+                <!-- Plan 1: Start -->
+                <div class="plan-card">
+                    <div class="plan-icon start">S</div>
+                    <h3>Start</h3>
+                    <p class="plan-ideal">Autônomos, MEIs, portfólios simples</p>
+                    <div class="plan-price">
+                        <span class="price">R$ 79,99</span>
+                        <span class="period">/mês</span>
+                        <div class="setup">Setup: R$ 149,99</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 1 página (Landing)</li>
+                        <li><i class="fas fa-check"></i> Botão WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Link Instagram</li>
+                        <li><i class="fas fa-check"></i> Subdomínio (nomedaloja.seusite.com)</li>
+                        <li><i class="fas fa-check"></i> 1 alteração/mês</li>
+                    </ul>
+                    <button class="btn btn-plan start" onclick="selectPlan('Start', 'R$ 79,99')">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <!-- Plan 2: Profissional -->
+                <div class="plan-card popular">
+                    <div class="popular-badge">Mais Popular</div>
+                    <div class="plan-icon professional">P</div>
+                    <h3>Profissional</h3>
+                    <p class="plan-ideal">Pequenas empresas e prestadores de serviço</p>
+                    <div class="plan-price">
+                        <span class="price">R$ 99,99</span>
+                        <span class="period">/mês</span>
+                        <div class="setup">Setup: R$ 189,99</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Até 4 páginas (Home, Sobre, Serviços, Contato)</li>
+                        <li><i class="fas fa-check"></i> Formulário de contato</li>
+                        <li><i class="fas fa-check"></i> WhatsApp integrado</li>
+                        <li><i class="fas fa-check"></i> Domínio próprio (.com ou .com.br)</li>
+                        <li><i class="fas fa-check"></i> 2 alterações/mês</li>
+                    </ul>
+                    <button class="btn btn-plan professional" onclick="selectPlan('Profissional', 'R$ 99,99')">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <!-- Plan 3: Catálogo -->
+                <div class="plan-card">
+                    <div class="plan-icon catalog">C</div>
+                    <h3>Catálogo</h3>
+                    <p class="plan-ideal">Lojas que querem mostrar produtos</p>
+                    <div class="plan-price">
+                        <span class="price">R$ 129,99</span>
+                        <span class="period">/mês</span>
+                        <div class="setup">Setup: R$ 229,99</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Até 6 páginas</li>
+                        <li><i class="fas fa-check"></i> Catálogo com até 20 produtos</li>
+                        <li><i class="fas fa-check"></i> Botão 'comprar no WhatsApp'</li>
+                        <li><i class="fas fa-check"></i> Domínio próprio</li>
+                        <li><i class="fas fa-check"></i> Suporte 2x/mês</li>
+                    </ul>
+                    <button class="btn btn-plan catalog" onclick="selectPlan('Catálogo', 'R$ 129,99')">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <!-- Plan 4: Loja Virtual -->
+                <div class="plan-card">
+                    <div class="plan-icon store">L</div>
+                    <h3>Loja Virtual</h3>
+                    <p class="plan-ideal">Quem quer vender online (e-commerce)</p>
+                    <div class="plan-price">
+                        <span class="price">R$ 169,99</span>
+                        <span class="period">/mês</span>
+                        <div class="setup">Setup: R$ 449,99</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> WooCommerce com carrinho</li>
+                        <li><i class="fas fa-check"></i> Pix/cartão de crédito</li>
+                        <li><i class="fas fa-check"></i> Painel de pedidos</li>
+                        <li><i class="fas fa-check"></i> Página de frete</li>
+                        <li><i class="fas fa-check"></i> 3 alterações/mês</li>
+                        <li><i class="fas fa-check"></i> Domínio próprio</li>
+                    </ul>
+                    <button class="btn btn-plan store" onclick="selectPlan('Loja Virtual', 'R$ 169,99')">
+                        Escolher Plano
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>🛠️ Todos os planos incluem</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-code"></i></div>
+                    <span>Site feito do zero em WordPress</span>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-globe"></i></div>
+                    <span>Layout profissional e responsivo</span>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+                    <span>Hospedagem rápida (incluída)</span>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <span>SSL (cadeado de segurança)</span>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <span>Backups semanais</span>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-headphones"></i></div>
+                    <span>Suporte mensal (alterações pequenas)</span>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-star"></i></div>
+                    <span>Site no ar em até 5 dias úteis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="bonus">
+        <div class="container">
+            <div class="bonus-card">
+                <h2>🎁 Bônus por tempo limitado</h2>
+                <div class="bonus-grid">
+                    <div class="bonus-item">
+                        <div class="bonus-emoji">🆓</div>
+                        <h3>Setup Grátis</h3>
+                        <p>Nos planos anuais</p>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-emoji">🌐</div>
+                        <h3>Domínio Grátis</h3>
+                        <p>No plano de 1 ano da Loja Virtual</p>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-emoji">💳</div>
+                        <h3>Página de Pagamento</h3>
+                        <p>Link Pix, Mercado Pago ou WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Contract Section -->
+    <section class="how-to">
+        <div class="container">
+            <div class="section-header">
+                <h2>📱 Como contratar</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Escolha o plano</h3>
+                    <p>Ideal para sua loja</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Envie suas informações</h3>
+                    <p>Nome, logo, cores, serviços, produtos</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Site no ar</h3>
+                    <p>Em até 120h</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para ter seu site profissional?</h2>
+            <p>Escolha o plano ideal e tenha seu site no ar em até 5 dias úteis!</p>
+            <button class="btn btn-primary btn-lg" onclick="openWhatsApp('Olá! Estou pronto para ter meu site profissional. Gostaria de mais informações!')">
+                Começar Agora
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span class="logo-text">code<span class="accent">.bble</span></span>
+            </div>
+            <p>© 2024 code.bble. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
